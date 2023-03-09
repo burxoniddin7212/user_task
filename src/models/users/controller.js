@@ -50,6 +50,7 @@ let GET = async (req, res, next) => {
 
 let GETBYID = async (req, res, next) => {
   try {
+    if(!req.params.id) return next(new BedRequest("id is required"));
     let user = await modul.GETBYID(req.params.id);
 
     return res.status(200).send({
