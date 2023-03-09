@@ -9,7 +9,7 @@ export let ErrorHendler = async (error, req, res, next) => {
     })
   }
 
-  fs.appendFileSync(path.join(process.cwd(), 'src', 'log.tx'), `${req.url}---${req.ip}-----${Date()}\n`)
+  fs.appendFileSync(path.join(process.cwd(), 'src', 'log.tx'), `${req.url}---${req.ip}----${req.body}---${Date()}\n`)
   return res.status(error.status).send({
     message: error.name
   })
