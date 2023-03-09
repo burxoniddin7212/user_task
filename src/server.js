@@ -2,7 +2,6 @@ import express from "express";
 import { PORT } from "./config.js"
 import { ErrorHendler } from "./lib/errorHendler.js";
 import router from "./models/users/router.js";
-import "./lib/nodemailer.js";
 
 let app = express();
 

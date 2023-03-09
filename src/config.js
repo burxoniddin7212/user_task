@@ -10,3 +10,10 @@ export const pgConfig = {
   password: process.env.PG_PASSWORD,
   port: process.env.PG_PORT,
 };
+
+export const redisConfig = {
+  port: 6379, // Redis port
+  host: '127.0.0.1', // Redis host
+  db: 0, // Defaults to 0
+};
+
