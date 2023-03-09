@@ -9,6 +9,7 @@ let REGISTER = async (req, res, next) => {
     if (userCHeek) return next(new ValidationError("email or password unique"));
     let user = await modul.REGISTER(req.body);
     if (!user) return next(new BedRequest("bed request"));
+    
     return res.status(201).send({
       message: 'ok',
       data: user,
